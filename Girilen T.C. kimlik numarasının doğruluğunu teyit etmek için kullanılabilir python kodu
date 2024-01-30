@@ -1,0 +1,46 @@
+odd_number = []
+even_number = []
+first_ten_digit1 = []
+while True:
+    tc_no_from_user = input("geçerli tc no giriniz: ")
+
+    if len(tc_no_from_user) > 0 and tc_no_from_user[0] == '0':
+        print("lütfen 0 ile başlamyan bir numara giriniz")
+        continue
+
+    if len(tc_no_from_user) != 11:
+        print("lütfen 11 haneli bir numara giriniz")
+        continue
+
+    if not tc_no_from_user.isdigit():
+        print("yalnızca numerik değerler giriniz")
+        continue
+
+    odd_str = tc_no_from_user[:10:2]
+    even_str = tc_no_from_user[1:9:2]
+
+
+    for o in odd_str:
+        odd_number.append(int(o))
+    sum_of_odd = sum(odd_number)
+
+    for e in even_str:
+        even_number.append(int(e))
+    sum_of_even = sum(even_number)
+
+    if ((sum_of_odd * 7 ) - sum_of_even) %10 != int(tc_no_from_user[-2]):
+        print("10uncu hane yanlış")
+        continue
+
+    first_ten_digit = tc_no_from_user[:-1]
+
+    for f in first_ten_digit:
+        first_ten_digit1.append(int(f))
+    sum_of_ten_digit = sum(first_ten_digit1)
+
+    if sum_of_ten_digit% 10 != int(tc_no_from_user[-1]):
+        print("son hane hatalı")
+        continue
+
+    break
+print("tc no kaydedildi : {}".format(tc_no_from_user))

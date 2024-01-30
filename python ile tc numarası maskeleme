@@ -1,0 +1,30 @@
+#first way
+tc_no = input("tc no giriniz")
+first_char = tc_no[:2]
+last_char = tc_no[-2:]
+total_lenght = len(tc_no)
+masked_parts = len(tc_no) - len(first_char) - len(last_char)
+
+
+print(first_char + "#" * masked_parts + last_char)
+
+
+
+
+#second way
+tc_no = input("tc no giriniz")
+first_char = tc_no[:2]
+last_char = tc_no[-2:]
+total_lenght = len(tc_no)
+masked_to_be_part = tc_no[len(first_char):-len(last_char)]
+masked_part = masked_to_be_part.replace(masked_to_be_part, "#"*len(masked_to_be_part))
+
+print(first_char + masked_part + last_char)
+
+
+
+
+
+
+
+

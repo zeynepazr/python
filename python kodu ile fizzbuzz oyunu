@@ -1,0 +1,30 @@
+def fizzbuzz(i):
+
+    if i % 3 == 0 and i % 5 == 0:
+        print("fizzbuzz")
+    elif i % 3 == 0:
+        print("fizz")
+    elif i % 5 == 0:
+        print("buzz")
+    else:
+        print(i)
+
+
+i = int(input("please enter a number: "))
+fizzbuzz(i)
+
+
+
+#2.yol
+def fizzbuzz(i):
+    if i % 3 == 0 and i % 5 == 0:
+        return "fizzbuzz"
+    elif i % 3 == 0:
+        return "fizz"
+    elif i % 5 == 0:
+        return "buzz"
+    else:
+        return(i)
+
+i = int(input("please enter a number: "))
+print(fizzbuzz(i))

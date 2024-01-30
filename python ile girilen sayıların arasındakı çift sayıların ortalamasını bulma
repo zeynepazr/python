@@ -1,0 +1,12 @@
+def ciftmi(x):
+    return x %2 ==0
+toplam = 0
+sayac = 0
+baslangic = int(input("başlangıç sayısı: "))
+bitis = int(input("bitiş sayısı: "))
+
+for sayi in range(baslangic, bitis+1):
+    if (ciftmi(sayi)):
+        toplam+= sayi
+        sayac += 1
+print("ortalama {}".format(toplam/sayac))

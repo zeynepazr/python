@@ -1,0 +1,20 @@
+try:
+    a = int(input("sayı gir: "))
+    b = int(input("sayı gir: "))
+    if b == 0:
+        raise ZeroDivisionError
+    c = a / b
+    x = 6
+    d = x
+    isim = input("isim giriniz: ")
+    karakter = isim[5]
+    list1 = [1,2,3]
+    m = list1[4]
+except ZeroDivisionError as e:
+    print(e)
+except NameError as e:
+    print(e)
+except IndexError as e:
+    print(e)
+except Exception:
+    print("bilinmeyen bir hata oluştu")

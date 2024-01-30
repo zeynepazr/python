@@ -1,0 +1,10 @@
+x = str(input("please enter a word"))
+x = x.upper()
+while True:
+
+    y = str(input("please guess the word"))
+    if x==y:
+        print("true")
+        break
+    else:
+        print("false")

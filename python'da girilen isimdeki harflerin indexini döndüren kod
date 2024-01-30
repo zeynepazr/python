@@ -1,0 +1,10 @@
+import string
+
+name = input("bir isim giriniz: ")
+
+x = []
+
+for letter in name:
+    indexing = string.ascii_lowercase.index(letter)
+    x.append(string.ascii_lowercase.index(letter))
+print(x)
